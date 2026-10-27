@@ -394,3 +394,6 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 @media (max-width: 640px) { .map-card iframe { height: 240px; } }
 .about-portrait { max-width: 420px; width: 100%; justify-self: center; border-radius: 0; overflow: visible; }
 .about-portrait img { aspect-ratio: 4/5; }
+/* Keep the footer's last line clear of the floating Melissa button */
+body:has(.melissa) .foot-base { padding-bottom: 96px; }
+@media (max-width: 560px) { body:has(.melissa) .foot-base { padding-bottom: 84px; } }
