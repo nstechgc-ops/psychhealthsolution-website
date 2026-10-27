@@ -385,3 +385,10 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 @media (prefers-reduced-motion: reduce) {
   .mel-dot i, .mel-ring, .mel-core i, .mel-panel { animation: none !important; }
 }
+
+/* Location map */
+.map-card { margin: 28px 0 0; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.map-card iframe { display: block; width: 100%; height: 300px; border: 0; filter: saturate(.85); }
+.map-card figcaption { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: center; padding: 14px 20px; font-size: .95rem; color: var(--ink-2); }
+.map-card figcaption a { color: var(--iris); font-weight: 600; }
+@media (max-width: 640px) { .map-card iframe { height: 240px; } }

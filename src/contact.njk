@@ -32,6 +32,11 @@ permalink: /contact/
         <p>All appointments are by video. Please don't visit the office without an arranged appointment.</p>
       </article>
     </div>
+    {% set addr = site.street + ", " + site.city + ", " + site.state + " " + site.zip %}
+    <figure class="map-card">
+      <iframe title="Map showing {{ site.legalName }} at {{ addr }}" src="https://www.google.com/maps?q={{ addr | urlencode }}&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <figcaption><span>{{ addr }}</span><a href="https://www.google.com/maps/search/?api=1&query={{ addr | urlencode }}" target="_blank" rel="noopener">Open in Google Maps</a></figcaption>
+    </figure>
   </div>
 </section>
 
