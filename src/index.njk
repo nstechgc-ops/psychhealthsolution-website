@@ -87,7 +87,8 @@ bodyClass: home
 
 {% if site.showMelissa %}
 <section class="dawn" aria-labelledby="dawn-h">
-  {{ pic("sunrise", "", "100vw", [900, 1600, 2400], "dawn-img") }}
+  {{ pic("dawn-poster", "", "100vw", [900, 1600], "dawn-img dawn-still") }}
+  <video class="dawn-img dawn-video" autoplay muted loop playsinline preload="metadata" poster="/images/dawn-poster-1600.webp" aria-hidden="true"><source src="/media/dawn.mp4" type="video/mp4"></video>
   <div class="wrap dawn-in">
     <div class="dawn-card">
       <h2 id="dawn-h" class="h2">{{ home.melissaTitle }}</h2>

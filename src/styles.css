@@ -407,3 +407,6 @@ body:has(.melissa) .foot-base { justify-content: flex-start; padding-right: 270p
 .brand-sub { display: flex; align-items: center; gap: 8px; justify-content: center; font-weight: 700; color: var(--plum); letter-spacing: .28em; padding-left: .28em; }
 .brand-sub::before, .brand-sub::after { content: ""; flex: 1; max-width: 70px; height: 1px; background: var(--lilac); }
 .brand-tag { text-align: center; }
+.dawn-img { object-position: 30% 40%; }
+@media (prefers-reduced-motion: reduce) { .dawn-video { display: none; } }
+@media (min-width: 861px) { .dawn-in { display: flex; justify-content: flex-end; } }
