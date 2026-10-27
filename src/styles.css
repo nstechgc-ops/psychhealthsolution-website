@@ -392,3 +392,5 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 .map-card figcaption { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; align-items: center; padding: 14px 20px; font-size: .95rem; color: var(--ink-2); }
 .map-card figcaption a { color: var(--iris); font-weight: 600; }
 @media (max-width: 640px) { .map-card iframe { height: 240px; } }
+.about-portrait { max-width: 420px; width: 100%; justify-self: center; border-radius: 0; overflow: visible; }
+.about-portrait img { aspect-ratio: 4/5; }
