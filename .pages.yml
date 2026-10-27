@@ -25,7 +25,9 @@ content:
       - { name: selfPayBookingUrl, label: "Self-pay online booking link (leave empty to show 'Call to book')", type: string }
       - { name: portalUrl, label: "Patient portal link", type: string }
       - { name: selfPayFee, label: "Self-pay initial visit fee (e.g. $200)", type: string }
-      - { name: showMelissa, label: "Show the 24/7 phone assistant (Melissa) section", type: boolean }
+      - { name: showMelissa, label: "Show Melissa (phone section and Talk to Melissa button)", type: boolean }
+      - { name: vapiPublicKey, label: "Melissa web voice: Vapi public key", type: string }
+      - { name: melissaAssistantId, label: "Melissa web voice: Vapi assistant ID", type: string }
       - { name: url, label: "Website address", type: string }
       - { name: shareImage, label: "Image shown when the site is shared", type: image }
   - name: home

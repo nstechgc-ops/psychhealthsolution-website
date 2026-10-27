@@ -95,6 +95,32 @@
     <p>Website by <a href="https://nstechglobal.com" target="_blank" rel="noopener">NS Tech Global Consulting</a></p>
   </div>
 </footer>
+{% if site.showMelissa %}
+<div class="melissa" data-state="idle" data-key="{{ site.vapiPublicKey }}" data-assistant="{{ site.melissaAssistantId }}">
+  <button class="mel-launch" type="button" aria-haspopup="dialog" aria-controls="mel-panel" aria-expanded="false">
+    <span class="mel-dot" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="mel-launch-txt"><strong>Talk to Melissa</strong><span>Virtual assistant, any hour</span></span>
+  </button>
+  <div class="mel-panel" id="mel-panel" role="dialog" aria-labelledby="mel-title" hidden>
+    <button class="mel-close" type="button" aria-label="Close Melissa">&times;</button>
+    <div class="mel-stage" aria-hidden="true">
+      <div class="mel-orb"><span class="mel-ring"></span><span class="mel-ring r2"></span><span class="mel-core"><i></i><i></i><i></i><i></i><i></i></span></div>
+    </div>
+    <h2 id="mel-title">Hi, I'm Melissa</h2>
+    <p class="mel-sub">Virtual assistant for {{ site.name }}</p>
+    <p class="mel-status" aria-live="polite">Ask me about services, insurance, booking or video visits, in English, Spanish or French.</p>
+    <div class="mel-captions" aria-live="polite" hidden></div>
+    <div class="mel-actions">
+      <button class="btn btn-primary mel-start" type="button">Start voice chat</button>
+      <button class="btn btn-ghost mel-mute" type="button" aria-pressed="false" hidden>Mute</button>
+      <button class="btn mel-end" type="button" hidden>End chat</button>
+      <a class="btn btn-ghost mel-call" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+    </div>
+    <p class="mel-note">Melissa is an AI assistant, not a clinician. Please don't share personal health details. In a crisis, call or text <a href="tel:988">988</a>. In an emergency, call <a href="tel:911">911</a>.</p>
+  </div>
+</div>
+<script type="module" src="/melissa.js"></script>
+{% endif %}
 <script src="/site.js" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@ import markdownIt from "markdown-it";
 const md = markdownIt({ html: true, linkify: true, typographer: true });
 
 export default function (c) {
-  ["src/images", "src/fonts", "src/styles.css", "src/site.js", "src/robots.txt", "src/_headers", "src/_redirects"].forEach((p) =>
+  ["src/images", "src/fonts", "src/styles.css", "src/site.js", "src/melissa.js", "src/vapi-sdk.js", "src/robots.txt", "src/_headers", "src/_redirects"].forEach((p) =>
     c.addPassthroughCopy(p)
   );
   c.setLibrary("md", md);

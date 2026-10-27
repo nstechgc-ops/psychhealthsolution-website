@@ -327,3 +327,61 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 @media (max-width: 640px) { .page-banner img { aspect-ratio: 16/10; } }
 @media (prefers-reduced-motion: reduce) { .svc-img img { transition: none; } }
 .page-banner + .section { padding-top: clamp(40px, 5vw, 64px) !important; }
+
+/* Melissa voice assistant */
+.melissa { --lvl: 0; position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60; font-family: var(--sans); }
+.mel-launch { display: flex; align-items: center; gap: 12px; padding: 10px 20px 10px 10px; border: 0; border-radius: 999px; background: var(--plum); color: #fff; cursor: pointer; box-shadow: 0 14px 34px -12px rgba(46,26,71,.6); transition: transform .25s ease, box-shadow .25s ease; text-align: left; }
+.mel-launch:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -12px rgba(46,26,71,.7); }
+.mel-launch:focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; }
+.mel-launch-txt strong { display: block; font-size: .98rem; line-height: 1.2; }
+.mel-launch-txt span { display: block; font-size: .78rem; opacity: .78; }
+.mel-dot { width: 40px; height: 40px; border-radius: 50%; display: grid; grid-auto-flow: column; place-content: center; gap: 3px; background: radial-gradient(circle at 30% 30%, #9C7BD0, var(--iris) 60%, var(--iris-deep)); }
+.mel-dot i { width: 3px; border-radius: 3px; background: #fff; height: 10px; animation: melbar 1.4s ease-in-out infinite; }
+.mel-dot i:nth-child(2) { height: 16px; animation-delay: .2s; }
+.mel-dot i:nth-child(3) { animation-delay: .4s; }
+@keyframes melbar { 0%,100% { transform: scaleY(.55); } 50% { transform: scaleY(1); } }
+.melissa.is-open .mel-launch { display: none; }
+
+.mel-panel { width: min(380px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; background: #fff; border-radius: 24px; padding: 28px 24px 20px; box-shadow: 0 30px 80px -24px rgba(46,26,71,.55); border: 1px solid var(--line); text-align: center; position: relative; animation: melin .35s cubic-bezier(.2,.8,.2,1); }
+@keyframes melin { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.mel-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--lavender); color: var(--plum); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.mel-close:hover { background: var(--lavender-2); }
+.mel-stage { display: grid; place-items: center; height: 150px; margin-bottom: 6px; }
+.mel-orb { position: relative; width: 112px; height: 112px; display: grid; place-items: center; }
+.mel-core { position: relative; z-index: 2; width: 92px; height: 92px; border-radius: 50%; display: grid; grid-auto-flow: column; place-content: center; gap: 5px; background: radial-gradient(circle at 32% 28%, #B49AE0, var(--iris) 55%, var(--plum)); box-shadow: inset 0 -8px 20px rgba(46,26,71,.4), 0 12px 30px -10px rgba(91,58,142,.7); transform: scale(calc(1 + var(--lvl) * .12)); transition: transform .12s linear; }
+.mel-core i { width: 5px; height: 16px; border-radius: 4px; background: rgba(255,255,255,.92); transform: scaleY(calc(.5 + var(--lvl) * 2.2)); transition: transform .1s linear; }
+.mel-core i:nth-child(2), .mel-core i:nth-child(4) { height: 26px; }
+.mel-core i:nth-child(3) { height: 34px; }
+.mel-ring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--lilac); opacity: 0; }
+.melissa[data-state="idle"] .mel-ring { animation: melring 3.2s ease-out infinite; }
+.melissa[data-state="idle"] .mel-ring.r2 { animation-delay: 1.6s; }
+.melissa[data-state="connecting"] .mel-ring { animation: melring 1.2s ease-out infinite; }
+.melissa[data-state="connecting"] .mel-ring.r2 { animation-delay: .6s; }
+.melissa[data-state="listening"] .mel-ring { opacity: .6; border-color: var(--sage); animation: none; transform: scale(1.12); }
+.melissa[data-state="speaking"] .mel-ring { animation: melring 1.6s ease-out infinite; }
+.melissa[data-state="speaking"] .mel-ring.r2 { animation-delay: .8s; }
+@keyframes melring { 0% { transform: scale(.85); opacity: .7; } 100% { transform: scale(1.55); opacity: 0; } }
+.melissa[data-state="idle"] .mel-core i, .melissa[data-state="connecting"] .mel-core i { animation: melbar 1.6s ease-in-out infinite; }
+.mel-core i:nth-child(2) { animation-delay: .15s !important; } .mel-core i:nth-child(3) { animation-delay: .3s !important; } .mel-core i:nth-child(4) { animation-delay: .45s !important; } .mel-core i:nth-child(5) { animation-delay: .6s !important; }
+.mel-panel h2 { font-family: var(--serif); font-size: 1.6rem; color: var(--plum); margin: 0 0 2px; }
+.mel-sub { color: var(--ink-2); font-size: .9rem; margin: 0 0 14px; }
+.mel-status { color: var(--plum); font-weight: 500; margin: 0 auto 14px; max-width: 30ch; min-height: 3em; }
+.mel-captions { text-align: left; background: var(--lavender); border-radius: 14px; padding: 12px 14px; margin-bottom: 14px; font-size: .9rem; max-height: 160px; overflow: auto; }
+.mel-captions p { margin: 0 0 6px; color: var(--ink-2); }
+.mel-captions p:last-child { margin: 0; }
+.mel-captions strong { color: var(--plum); }
+.mel-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.mel-actions .btn { flex: 1 1 140px; justify-content: center; }
+.mel-end { background: #8E2C48; color: #fff; border-color: #8E2C48; }
+.mel-end:hover { background: #74223a; }
+.mel-note { font-size: .78rem; color: var(--ink-2); margin: 16px 0 0; line-height: 1.5; }
+@media (max-width: 560px) {
+  .mel-launch { padding: 8px; }
+  .mel-launch-txt { display: none; }
+  .mel-dot { width: 48px; height: 48px; }
+  .mel-panel { width: calc(100vw - 24px); }
+  .melissa { right: 12px; bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mel-dot i, .mel-ring, .mel-core i, .mel-panel { animation: none !important; }
+}

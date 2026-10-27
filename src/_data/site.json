@@ -19,5 +19,7 @@
   "portalUrl": "",
   "selfPayFee": "$200",
   "showMelissa": true,
-  "shareImage": "/images/share.jpg"
+  "shareImage": "/images/share.jpg",
+  "vapiPublicKey": "",
+  "melissaAssistantId": ""
 }

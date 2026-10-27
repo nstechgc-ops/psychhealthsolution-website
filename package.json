@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "build": "eleventy", "start": "eleventy --serve" },
-  "devDependencies": { "@11ty/eleventy": "^3.1.7", "markdown-it": "^14.3.3" }
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "vapi": "esbuild tools/vapi-entry.js --bundle --format=esm --minify --platform=browser --target=es2020 --outfile=src/vapi-sdk.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@vapi-ai/web": "^3.0.1",
+    "esbuild": "^0.28.2",
+    "markdown-it": "^14.3.3"
+  }
 }
