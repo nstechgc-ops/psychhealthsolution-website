@@ -26,6 +26,7 @@ content:
       - { name: portalUrl, label: "Patient portal link", type: string }
       - { name: selfPayFee, label: "Self-pay initial visit fee (e.g. $200)", type: string }
       - { name: showMelissa, label: "Show Melissa (phone section and Talk to Melissa button)", type: boolean }
+      - { name: melissaPhone, label: "Melissa phone number (leave empty to use the main phone)", type: string }
       - { name: vapiPublicKey, label: "Melissa web voice: Vapi public key", type: string }
       - { name: melissaAssistantId, label: "Melissa web voice: Vapi assistant ID", type: string }
       - { name: url, label: "Website address", type: string }

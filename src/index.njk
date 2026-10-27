@@ -93,7 +93,7 @@ bodyClass: home
       <h2 id="dawn-h" class="h2">{{ home.melissaTitle }}</h2>
       <p>{{ home.melissaText }}</p>
       <div class="actions">
-        <a class="btn btn-primary" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+        {% set melPhone = site.melissaPhone or site.phone %}<a class="btn btn-primary" href="tel:{{ melPhone | tel }}">Call {{ melPhone }}</a>
         <button class="btn btn-ghost" type="button" data-melissa-open>Talk to her online</button>
       </div>
     </div>

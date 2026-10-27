@@ -114,7 +114,7 @@
       <button class="btn btn-primary mel-start" type="button">Start voice chat</button>
       <button class="btn btn-ghost mel-mute" type="button" aria-pressed="false" hidden>Mute</button>
       <button class="btn mel-end" type="button" hidden>End chat</button>
-      <a class="btn btn-ghost mel-call" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+      {% set melPhone = site.melissaPhone or site.phone %}<a class="btn btn-ghost mel-call" href="tel:{{ melPhone | tel }}">Call {{ melPhone }}</a>
     </div>
     <p class="mel-note">Melissa is an AI assistant, not a clinician. Please don't share personal health details. In a crisis, call or text <a href="tel:988">988</a>. In an emergency, call <a href="tel:911">911</a>.</p>
   </div>

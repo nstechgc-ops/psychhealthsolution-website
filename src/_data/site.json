@@ -20,6 +20,7 @@
   "selfPayFee": "$200",
   "showMelissa": true,
   "shareImage": "/images/share.jpg",
-  "vapiPublicKey": "",
-  "melissaAssistantId": ""
+  "vapiPublicKey": "a7fe2b0e-d7e2-4134-8291-7b8785450e2e",
+  "melissaAssistantId": "d11ca117-08f9-4c30-beb5-27a58dd74dbd",
+  "melissaPhone": "727-476-9223"
 }
