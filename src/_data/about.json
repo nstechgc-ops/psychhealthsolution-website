@@ -1,13 +1,28 @@
 {
-  "headshot": "",
+  "headshot": "/images/ada-ojobo-1000.webp",
   "intro": "Ada Ojobo is a board-certified psychiatric mental health nurse practitioner who founded Psychiatric Health Solution to make thoughtful, unhurried psychiatric care easier to reach for families across Florida.",
   "body": "Ada has more than six years of experience in mental health care, across inpatient and outpatient settings, including caring for active-duty service members. That range shapes how she practices: calm in difficult moments, practical about what will actually help, and focused on the whole person rather than a list of symptoms.\n\nShe treats children from age 6, teens, adults and older adults, and she believes patients do best when they understand their care. Expect clear explanations, honest conversations about options, and a plan built together.\n\nCare draws on evidence-based approaches, including medication management, cognitive behavioral therapy techniques and motivational interviewing, alongside attention to sleep, stress and daily routines.",
   "quote": "You deserve care that listens first, explains clearly and fits the life you're actually living.",
   "credentials": [
-    { "label": "Certification", "value": "Board-certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC)" },
-    { "label": "License", "value": "Advanced Practice Registered Nurse, State of Florida" },
-    { "label": "Experience", "value": "More than six years in mental health care, inpatient and outpatient" },
-    { "label": "Ages", "value": "Children 6 and up, teens, adults and older adults" },
-    { "label": "Visits", "value": "Secure video, anywhere in Florida" }
+    {
+      "label": "Certification",
+      "value": "Board-certified Psychiatric Mental Health Nurse Practitioner (PMHNP-BC)"
+    },
+    {
+      "label": "License",
+      "value": "Advanced Practice Registered Nurse, State of Florida"
+    },
+    {
+      "label": "Experience",
+      "value": "More than six years in mental health care, inpatient and outpatient"
+    },
+    {
+      "label": "Ages",
+      "value": "Children 6 and up, teens, adults and older adults"
+    },
+    {
+      "label": "Visits",
+      "value": "Secure video, anywhere in Florida"
+    }
   ]
 }
