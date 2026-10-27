@@ -44,7 +44,7 @@ content:
         fields:
           - { name: title, label: Title, type: string }
           - { name: text, label: Text, type: text }
-          - { name: image, label: "Photo name (adult, family or older)", type: string }
+          - { name: image, label: "Photo name (who-adult, who-family or older)", type: string }
       - { name: aboutTitle, label: "About heading", type: string }
       - { name: aboutText, label: "About text", type: text }
       - { name: aboutQuote, label: "Quote", type: text }
@@ -64,6 +64,7 @@ content:
           - { name: name, label: Name, type: string }
           - { name: short, label: "Short description (home page)", type: text }
           - { name: body, label: "Full description (Services page)", type: text }
+          - { name: image, label: "Photo name (leave empty for none)", type: string }
   - name: about
     label: About Ada
     type: file

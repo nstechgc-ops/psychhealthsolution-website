@@ -4,18 +4,21 @@ title: Services
 description: Telehealth psychiatric evaluations, medication management, and care for anxiety, depression, bipolar disorder, ADHD, trauma and PTSD, and child and adolescent mental health in Florida.
 permalink: /services/
 ---
+{% from "pic.njk" import pic, banner %}
 <section class="page-head">
   <div class="wrap">
     <h1>Psychiatric care built around you</h1>
     <p class="lede">{{ services.intro }}</p>
   </div>
 </section>
+{{ banner('b-services', 'Mangrove shoreline at dawn on Florida\'s Gulf Coast, with a purple butterfly lifting off a sea grape branch', [800, 1200, 1600]) }}
 
 <section class="section">
   <div class="wrap">
     <ul class="svc-detail">
       {% for s in services.items %}
       <li>
+        {% if s.image %}<div class="svc-img">{{ pic(s.image, "", "(max-width: 860px) 92vw, 560px", [480, 800]) }}</div>{% endif %}
         <h2>{{ s.name }}</h2>
         <p>{{ s.body }}</p>
       </li>

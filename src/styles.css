@@ -315,3 +315,15 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 .site-foot .btn-light { color: var(--plum); }
 .site-foot .btn-light:hover { color: var(--plum); text-decoration: none; }
 .contact-card .big-email { font-size: 1.22rem; overflow-wrap: normal; }
+
+/* Page banners and service images */
+.page-banner { background: linear-gradient(180deg, var(--lavender) 0 50%, #fff 50% 100%); }
+.page-banner figure { margin: 0; border-radius: var(--r-md); overflow: hidden; box-shadow: 0 24px 60px -30px rgba(46,26,71,.45); }
+.page-banner img { display: block; width: 100%; aspect-ratio: 21/9; object-fit: cover; }
+.page-head + .page-banner { margin-top: -1px; }
+.svc-img { border-radius: var(--r-md); overflow: hidden; margin-bottom: 22px; }
+.svc-img img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .8s ease; }
+.svc-detail li:hover .svc-img img { transform: scale(1.03); }
+@media (max-width: 640px) { .page-banner img { aspect-ratio: 16/10; } }
+@media (prefers-reduced-motion: reduce) { .svc-img img { transition: none; } }
+.page-banner + .section { padding-top: clamp(40px, 5vw, 64px) !important; }

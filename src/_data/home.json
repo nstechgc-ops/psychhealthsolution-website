@@ -4,8 +4,8 @@
   "heroPoints": ["Board-certified psychiatric nurse practitioner", "Ages 6 and up", "Insurance and self-pay"],
   "whoTitle": "Care for every stage of life",
   "who": [
-    { "title": "Adults", "text": "Anxiety, depression, mood, sleep, focus and stress, treated around your work and family schedule.", "image": "adult" },
-    { "title": "Children and teens", "text": "Thoughtful care for young people from age 6, with parents and guardians as partners.", "image": "family" },
+    { "title": "Adults", "text": "Anxiety, depression, mood, sleep, focus and stress, treated around your work and family schedule.", "image": "who-adult" },
+    { "title": "Children and teens", "text": "Thoughtful care for young people from age 6, with parents and guardians as partners.", "image": "who-family" },
     { "title": "Older adults", "text": "Patient, respectful care from the comfort of home, with help getting set up for video visits.", "image": "older" }
   ],
   "aboutTitle": "Meet Ada Ojobo",

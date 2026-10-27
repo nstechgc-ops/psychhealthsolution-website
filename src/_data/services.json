@@ -4,42 +4,50 @@
     {
       "name": "Psychiatric evaluation",
       "short": "A thorough first visit to understand what you're experiencing and what has or hasn't helped.",
-      "body": "Your first visit is unhurried. We talk through your symptoms, history, sleep, stress, goals and anything you've tried before. You leave with a clear picture of what's going on and a plan you helped shape."
+      "body": "Your first visit is unhurried. We talk through your symptoms, history, sleep, stress, goals and anything you've tried before. You leave with a clear picture of what's going on and a plan you helped shape.",
+      "image": "svc-evaluation"
     },
     {
       "name": "Medication management",
       "short": "Careful prescribing, follow-ups and adjustments, so treatment keeps fitting your life.",
-      "body": "When medication is part of your plan, we start thoughtfully, explain what to expect, and check in regularly to adjust doses, watch for side effects and make sure it's working for you."
+      "body": "When medication is part of your plan, we start thoughtfully, explain what to expect, and check in regularly to adjust doses, watch for side effects and make sure it's working for you.",
+      "image": "svc-medication"
     },
     {
       "name": "Anxiety and depression",
       "short": "Support for constant worry, panic, low mood, loss of interest and feeling stuck.",
-      "body": "Anxiety and depression are among the most treatable conditions in mental health. Care combines evidence-based medication options with practical, therapy-informed strategies."
+      "body": "Anxiety and depression are among the most treatable conditions in mental health. Care combines evidence-based medication options with practical, therapy-informed strategies.",
+      "image": "svc-anxiety"
     },
     {
       "name": "Bipolar and mood disorders",
       "short": "Steady, long-term care to help moods stay balanced and predictable.",
-      "body": "Mood disorders call for consistency. We work toward stability with careful medication management, early warning signs to watch for, and a plan for difficult stretches."
+      "body": "Mood disorders call for consistency. We work toward stability with careful medication management, early warning signs to watch for, and a plan for difficult stretches.",
+      "image": "svc-bipolar"
     },
     {
       "name": "ADHD in children and adults",
       "short": "Evaluation and treatment for focus, organization and impulsivity at any age.",
-      "body": "ADHD looks different in a second grader, a college student and a working parent. Care includes evaluation, treatment options and coordination with school or family when it helps."
+      "body": "ADHD looks different in a second grader, a college student and a working parent. Care includes evaluation, treatment options and coordination with school or family when it helps.",
+      "image": "svc-adhd"
     },
     {
       "name": "Trauma and PTSD",
       "short": "Trauma-informed care at a pace that feels safe for you.",
-      "body": "Care is grounded in safety and choice. Ada brings experience caring for active-duty service members and others living with the effects of trauma."
+      "body": "Care is grounded in safety and choice. Ada brings experience caring for active-duty service members and others living with the effects of trauma.",
+      "image": "svc-trauma"
     },
     {
       "name": "Child and adolescent care",
       "short": "Care for children 6 and up and teens, with parents as partners.",
-      "body": "Young people do best when the whole family is supported. Parents or guardians join visits as appropriate, and plans are built around school, sleep and home life."
+      "body": "Young people do best when the whole family is supported. Parents or guardians join visits as appropriate, and plans are built around school, sleep and home life.",
+      "image": "svc-child"
     },
     {
       "name": "And more",
       "short": "OCD, sleep problems and insomnia, stress, perinatal and postpartum mental health, and support with substance use concerns.",
-      "body": "Not sure whether your concern fits? Call and ask. If another kind of care would serve you better, we'll help point you in the right direction."
+      "body": "Not sure whether your concern fits? Call and ask. If another kind of care would serve you better, we'll help point you in the right direction.",
+      "image": ""
     }
   ]
 }
