@@ -32,7 +32,7 @@ permalink: /book/
           {% if site.selfPayBookingUrl %}
           <a class="btn btn-primary" href="{{ site.selfPayBookingUrl }}" target="_blank" rel="noopener">Book online</a>
           {% else %}
-          <a class="btn btn-primary" href="tel:{{ site.phone | tel }}">Call to book</a>
+          {% set bookPhone = (site.melissaPhone if site.showMelissa and site.melissaPhone else site.phone) %}<a class="btn btn-primary" href="tel:{{ bookPhone | tel }}">Call to book</a>
           {% endif %}
         </div>
         {% if not site.selfPayBookingUrl %}<p class="note">Online self-pay booking is coming soon. For now, call and we'll find a time with you.</p>{% endif %}
