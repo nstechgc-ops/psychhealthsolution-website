@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page.url != '/' %}{{ title }} | {{ site.name }}{% else %}{{ site.name }} | Telehealth Psychiatric Care in Florida{% endif %}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.shareImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2E1A47">
+<link rel="icon" href="/images/favicon.png" type="image/png">
+<link rel="preload" href="/fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css?v=1">
+{% if preloadHero %}<link rel="preload" as="image" href="/images/hero-900.webp" imagesrcset="/images/hero-560.webp 560w, /images/hero-900.webp 900w, /images/hero-1200.webp 1200w" imagesizes="(max-width: 860px) 92vw, 44vw">{% endif %}
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "{{ site.legalName }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/images/logo-mark.png",
+  "image": "{{ site.url }}{{ site.shareImage }}",
+  "description": "{{ site.description }}",
+  "telephone": "{{ site.phone | tel }}",
+  "email": "{{ site.email }}",
+  "medicalSpecialty": "Psychiatric",
+  "areaServed": { "@type": "State", "name": "Florida" },
+  "address": { "@type": "PostalAddress", "streetAddress": "{{ site.street }}", "addressLocality": "{{ site.city }}", "addressRegion": "{{ site.state }}", "postalCode": "{{ site.zip }}", "addressCountry": "US" },
+  "employee": { "@type": "Person", "name": "{{ site.provider }}", "jobTitle": "Psychiatric Mental Health Nurse Practitioner, Board Certified" }
+}</script>
+</head>
+<body class="{{ bodyClass }}">
+<a class="skip" href="#main">Skip to content</a>
+<div class="crisis" role="region" aria-label="Crisis support">
+  <div class="wrap">
+    <p>In crisis or thinking about suicide? Call or text <a href="tel:988"><strong>988</strong></a> any time. In an emergency, call <a href="tel:911"><strong>911</strong></a>.</p>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="/" aria-label="{{ site.name }} home">
+      <img src="/images/logo-mark.png" alt="" width="96" height="56">
+      <span class="brand-text"><span class="brand-name">{{ site.name }}</span><span class="brand-sub">P.L.L.C.</span></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav id="nav" class="nav" aria-label="Main">
+      {% set links = [["/services/","Services"],["/about/","About Ada"],["/telehealth/","Telehealth"],["/insurance/","Insurance & fees"],["/contact/","Contact"]] %}
+      <ul>
+        {% for l in links %}<li><a href="{{ l[0] }}"{% if page.url == l[0] %} aria-current="page"{% endif %}>{{ l[1] }}</a></li>{% endfor %}
+      </ul>
+      <a class="nav-phone" href="tel:{{ site.phone | tel }}">{{ site.phone }}</a>
+      <a class="btn btn-primary" href="/book/">Book a visit</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{ content | safe }}
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="foot-name">{{ site.legalName }}</p>
+      <p class="foot-tag">{{ site.tagline }}</p>
+      <a class="btn btn-light" href="/book/">Book a visit</a>
+    </div>
+    <div>
+      <h2 class="foot-h">Reach us</h2>
+      <p><a href="tel:{{ site.phone | tel }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>{{ site.street }}<br>{{ site.city }}, {{ site.state }} {{ site.zip }}</p>
+    </div>
+    <div>
+      <h2 class="foot-h">Visit</h2>
+      <ul class="foot-links">
+        <li><a href="/book/">Book a visit</a></li>
+        <li><a href="/telehealth/">How video visits work</a></li>
+        <li><a href="/insurance/">Insurance and fees</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About Ada Ojobo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="foot-h">If you need help now</h2>
+      <p>Call or text <a href="tel:988">988</a>, the Suicide &amp; Crisis Lifeline, any time. In an emergency, call <a href="tel:911">911</a> or go to the nearest emergency room.</p>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <p>&copy; {{ "" | year }} {{ site.legalName }}</p>
+    <p><a href="/privacy/">Privacy policy</a> <a href="/terms/">Terms of use</a> <a href="/accessibility/">Accessibility</a></p>
+    <p>Website by <a href="https://nstechglobal.com" target="_blank" rel="noopener">NS Tech Global Consulting</a></p>
+  </div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

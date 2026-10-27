@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: Services
+description: Telehealth psychiatric evaluations, medication management, and care for anxiety, depression, bipolar disorder, ADHD, trauma and PTSD, and child and adolescent mental health in Florida.
+permalink: /services/
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>Psychiatric care built around you</h1>
+    <p class="lede">{{ services.intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <ul class="svc-detail">
+      {% for s in services.items %}
+      <li>
+        <h2>{{ s.name }}</h2>
+        <p>{{ s.body }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section steps-band" style="background:var(--lavender)">
+  <div class="wrap two-col">
+    <div class="prose">
+      <h2 style="margin-top:0">Who we see</h2>
+      <p>Children from age 6, teens, adults and older adults anywhere in Florida. All visits are by secure video, so care fits around school, work and family.</p>
+      <h2>How care works</h2>
+      <p>Treatment is evidence-based and personal. Alongside medication when it's helpful, Ada draws on approaches such as cognitive behavioral therapy techniques and motivational interviewing, with attention to sleep, stress and daily habits.</p>
+      <p>If you'd benefit from ongoing therapy or another kind of specialist, we'll help you find it and coordinate where that helps.</p>
+    </div>
+    <aside class="aside" style="background:#fff">
+      <h2>Ready to start?</h2>
+      <p>Book with insurance or as self-pay, or call with any questions.</p>
+      <a class="btn btn-primary" href="/book/">Book a visit</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+    </aside>
+  </div>
+</section>

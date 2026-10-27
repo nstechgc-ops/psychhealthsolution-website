@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Insurance and fees
+description: Insurance plans accepted through Headway and Grow Therapy, self-pay fees, and your right to a Good Faith Estimate at Psychiatric Health Solution.
+permalink: /insurance/
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>Insurance and fees</h1>
+    <p class="lede">{{ insurance.intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col">
+    <div class="prose">
+      <h2 style="margin-top:0">Plans we work with</h2>
+      <ul class="plan-list">
+        {% for p in insurance.plans %}<li>{{ p }}</li>{% endfor %}
+      </ul>
+      <p>{{ insurance.plansNote }}</p>
+
+      <h2>How coverage is checked</h2>
+      <p>When you book through Headway or Grow Therapy, they verify your benefits and show your expected cost per visit before you're seen. They also handle billing with your insurance, so there's no paperwork for you to file.</p>
+
+      <h2>Self-pay</h2>
+      <div class="fee"><strong>{{ site.selfPayFee }}</strong><span>{{ insurance.selfPayNote }}</span></div>
+
+      <h2>Your right to a Good Faith Estimate</h2>
+      <p>Under federal law, if you don't have insurance or choose not to use it, you have the right to receive a Good Faith Estimate of the expected cost of your care before your visit. Ask for one when you book. If your bill is at least $400 more than your estimate, you may be able to dispute it. Learn more at <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener">cms.gov/nosurprises</a>.</p>
+
+      <h2>Cancellations</h2>
+      <p>If you need to cancel or reschedule, please let us know as early as you can so someone else can use that time. Your booking platform shows the cancellation policy that applies to your visit.</p>
+    </div>
+    <aside class="aside">
+      <h2>Questions about cost?</h2>
+      <p>Call and we'll help you understand your options before you book.</p>
+      <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+      <a class="btn btn-primary" href="/book/">Book a visit</a>
+    </aside>
+  </div>
+</section>

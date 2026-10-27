@@ -1,0 +1,44 @@
+---
+layout: base.njk
+title: About Ada Ojobo, PMHNP-BC
+description: Meet Ada Ojobo, PMHNP-BC, a board-certified psychiatric mental health nurse practitioner offering telehealth psychiatric care for all ages across Florida.
+permalink: /about/
+---
+{% from "pic.njk" import pic %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>Meet Ada Ojobo</h1>
+    <p class="lede">{{ about.intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap bio-grid">
+    <figure class="portrait">
+      <div class="arch">
+        {% if about.headshot %}<img src="{{ about.headshot }}" alt="Ada Ojobo, PMHNP-BC" width="600" height="750">{% else %}<span class="monogram" aria-hidden="true">AO</span>{% endif %}
+      </div>
+      <figcaption>{{ site.provider }}, {{ site.credentials }}<span>Founder, {{ site.name }}</span></figcaption>
+    </figure>
+    <div class="prose">
+      {{ about.body | md | safe }}
+      <blockquote><p>{{ about.quote }}</p><footer>{{ site.provider }}</footer></blockquote>
+      <h2>Credentials</h2>
+      <ul class="creds">
+        {% for c in about.credentials %}<li><span>{{ c.label }}</span><span>{{ c.value }}</span></li>{% endfor %}
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="/book/">Book with Ada</a>
+        <a class="btn btn-ghost" href="/services/">See services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <figure class="about-photo" style="margin:0">
+      {{ pic("office", "A calm reception area with lavender chairs and the practice logo", "(max-width: 1180px) 100vw, 1180px", [800, 1400]) }}
+    </figure>
+  </div>
+</section>

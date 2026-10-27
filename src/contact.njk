@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Contact
+description: Contact Psychiatric Health Solution by phone or email. Telehealth psychiatric care for all ages across Florida.
+permalink: /contact/
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>We're here to help</h1>
+    <p class="lede">{{ site.visitNote }}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-grid">
+      <article class="contact-card">
+        <h2>Call</h2>
+        <p><a class="big" href="tel:{{ site.phone | tel }}">{{ site.phone }}</a></p>
+        <p>{% if site.showMelissa %}Answered any hour in English, Spanish and French. Leave a request or message and the care team will follow up.{% else %}Leave a message any time and the care team will call you back.{% endif %}</p>
+      </article>
+      <article class="contact-card">
+        <h2>Email</h2>
+        <p><a class="big big-email" href="mailto:{{ site.email }}">{{ site.email | replace("@", "<wbr>@") | safe }}</a></p>
+        <p>Best for general questions. Please don't include health details, medications or diagnoses in email.</p>
+      </article>
+      <article class="contact-card">
+        <h2>Mailing address</h2>
+        <p style="color:var(--plum)">{{ site.legalName }}<br>{{ site.street }}<br>{{ site.city }}, {{ site.state }} {{ site.zip }}</p>
+        <p>All appointments are by video. Please don't visit the office without an arranged appointment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap prose">
+    <div class="notice"><p><strong>In crisis?</strong> This practice doesn't provide emergency care. Call or text <a href="tel:988">988</a>, the Suicide &amp; Crisis Lifeline, any time. In an emergency, call <a href="tel:911">911</a> or go to the nearest emergency room.</p></div>
+    <h2>Existing patients</h2>
+    <p>For refills, rescheduling or questions for Ada, use your patient portal or booking platform, or call and leave a message with your name, date of birth and a callback number.</p>
+  </div>
+</section>

@@ -1,0 +1,103 @@
+media:
+  input: src/images
+  output: /images
+content:
+  - name: site
+    label: Practice settings
+    type: file
+    path: src/_data/site.json
+    fields:
+      - { name: name, label: "Practice name", type: string }
+      - { name: legalName, label: "Legal name (footer)", type: string }
+      - { name: tagline, label: "Tagline", type: string }
+      - { name: description, label: "Google description", type: text }
+      - { name: provider, label: "Provider name", type: string }
+      - { name: credentials, label: "Credentials (e.g. PMHNP-BC)", type: string }
+      - { name: phone, label: "Main phone", type: string }
+      - { name: email, label: "Patient email", type: string }
+      - { name: street, label: "Street address", type: string }
+      - { name: city, label: "City", type: string }
+      - { name: state, label: "State", type: string }
+      - { name: zip, label: "ZIP", type: string }
+      - { name: visitNote, label: "Visit note (Contact page)", type: text }
+      - { name: headwayUrl, label: "Headway booking link", type: string }
+      - { name: growUrl, label: "Grow Therapy booking link", type: string }
+      - { name: selfPayBookingUrl, label: "Self-pay online booking link (leave empty to show 'Call to book')", type: string }
+      - { name: portalUrl, label: "Patient portal link", type: string }
+      - { name: selfPayFee, label: "Self-pay initial visit fee (e.g. $200)", type: string }
+      - { name: showMelissa, label: "Show the 24/7 phone assistant (Melissa) section", type: boolean }
+      - { name: url, label: "Website address", type: string }
+      - { name: shareImage, label: "Image shown when the site is shared", type: image }
+  - name: home
+    label: Home page
+    type: file
+    path: src/_data/home.json
+    fields:
+      - { name: heroTitle, label: "Main headline", type: string }
+      - { name: heroText, label: "Intro text", type: text }
+      - { name: heroPoints, label: "Checkmark points", type: string, list: true }
+      - { name: whoTitle, label: "'Who we see' heading", type: string }
+      - name: who
+        label: "Who we see"
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: "Photo name (adult, family or older)", type: string }
+      - { name: aboutTitle, label: "About heading", type: string }
+      - { name: aboutText, label: "About text", type: text }
+      - { name: aboutQuote, label: "Quote", type: text }
+      - { name: melissaTitle, label: "Phone assistant heading", type: string }
+      - { name: melissaText, label: "Phone assistant text", type: text }
+  - name: services
+    label: Services
+    type: file
+    path: src/_data/services.json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - name: items
+        label: Services
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: short, label: "Short description (home page)", type: text }
+          - { name: body, label: "Full description (Services page)", type: text }
+  - name: about
+    label: About Ada
+    type: file
+    path: src/_data/about.json
+    fields:
+      - { name: headshot, label: "Headshot photo", type: image }
+      - { name: intro, label: Intro, type: text }
+      - { name: body, label: Biography, type: rich-text, options: { format: markdown } }
+      - { name: quote, label: Quote, type: text }
+      - name: credentials
+        label: Credentials
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+  - name: insurance
+    label: Insurance and fees
+    type: file
+    path: src/_data/insurance.json
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - { name: plans, label: "Insurance plans", type: string, list: true }
+      - { name: plansNote, label: "Note under plans", type: text }
+      - { name: selfPayNote, label: "Self-pay note", type: text }
+  - name: legal
+    label: "Legal pages (Privacy, Terms, Accessibility)"
+    type: collection
+    path: src/legal
+    format: yaml-frontmatter
+    exclude: [legal.11tydata.js]
+    view: { fields: [title] }
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: "Google description", type: string }
+      - { name: updated, label: "Last updated (e.g. October 27, 2026)", type: string }
+      - { name: body, label: Content, type: rich-text }

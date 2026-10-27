@@ -1,0 +1,16 @@
+{
+  "heroTitle": "Mental health care that comes to you.",
+  "heroText": "Compassionate, evidence-based psychiatric care by secure video for children, teens, adults and older adults anywhere in Florida. No commute, no waiting room.",
+  "heroPoints": ["Board-certified psychiatric nurse practitioner", "Ages 6 and up", "Insurance and self-pay"],
+  "whoTitle": "Care for every stage of life",
+  "who": [
+    { "title": "Adults", "text": "Anxiety, depression, mood, sleep, focus and stress, treated around your work and family schedule.", "image": "adult" },
+    { "title": "Children and teens", "text": "Thoughtful care for young people from age 6, with parents and guardians as partners.", "image": "family" },
+    { "title": "Older adults", "text": "Patient, respectful care from the comfort of home, with help getting set up for video visits.", "image": "older" }
+  ],
+  "aboutTitle": "Meet Ada Ojobo",
+  "aboutText": "Ada is a board-certified psychiatric mental health nurse practitioner licensed in Florida, with more than six years of experience across inpatient and outpatient care, including caring for active-duty service members. Patients describe her as warm, empowering and genuinely caring.",
+  "aboutQuote": "You deserve care that listens first, explains clearly and fits the life you're actually living.",
+  "melissaTitle": "Call any hour. Someone always answers.",
+  "melissaText": "Our virtual assistant, Melissa, answers the practice line day and night in English, Spanish and French. She can take an appointment request or a message for the care team and help you find what you need. For a crisis, always call or text 988, or 911 in an emergency."
+}

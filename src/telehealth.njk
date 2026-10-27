@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: How video visits work
+description: How to prepare for and join a secure telehealth psychiatric visit with Psychiatric Health Solution, plus what to do if your video link doesn't work.
+permalink: /telehealth/
+---
+{% from "pic.njk" import pic %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>Video visits, made simple</h1>
+    <p class="lede">See Ada from home, work or anywhere private in Florida. If you can make a video call with family, you can do this.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col">
+    <div class="prose">
+      <h2 style="margin-top:0">What you'll need</h2>
+      <ul class="checklist">
+        <li>A smartphone, tablet or computer with a camera and microphone.</li>
+        <li>A steady internet connection. Wi-Fi works best.</li>
+        <li>A private, quiet space where you can talk freely.</li>
+        <li>Because Ada is licensed in Florida, you'll need to be in Florida during your visit.</li>
+      </ul>
+
+      <h2>How to join</h2>
+      <ol>
+        <li>After you book, you'll receive a secure visit link by email or text from the booking platform you used.</li>
+        <li>About ten minutes before your visit, open the link. On a phone, you may be asked to allow camera and microphone access; choose Allow.</li>
+        <li>Wait in the virtual waiting room. Ada will bring you in when it's time.</li>
+      </ol>
+
+      <h2>If the link doesn't work</h2>
+      <p>Try a different browser (Chrome or Safari work well), restart your device, or switch from cellular data to Wi-Fi. If you still can't connect, call <a href="tel:{{ site.phone | tel }}">{{ site.phone }}</a> and let us know. We'll help you get connected or reschedule.</p>
+
+      <h2>Your privacy</h2>
+      <p>Visits take place on HIPAA-compliant platforms designed for healthcare, and your information is protected under federal privacy law. Join from a private space so you can speak freely.</p>
+
+      <h2>Visits for children and teens</h2>
+      <p>A parent or guardian should join the first visit. For teens, Ada may also spend part of the visit speaking with them privately, which is a normal part of adolescent care.</p>
+    </div>
+    <aside class="aside">
+      <h2>Need a hand getting set up?</h2>
+      <p>Call before your visit and we'll walk you through it. Older adults are especially welcome to ask.</p>
+      <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+      <a class="btn btn-primary" href="/book/">Book a visit</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <figure class="about-photo" style="margin:0">
+      {{ pic("telehealth", "A woman smiles during a relaxed video visit on her laptop at home", "(max-width: 1180px) 100vw, 1180px", [900, 1400]) }}
+    </figure>
+  </div>
+</section>

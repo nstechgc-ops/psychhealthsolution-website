@@ -1,0 +1,18 @@
+{
+  "intro": "We work with many major insurance plans through our booking partners Headway and Grow Therapy, and we also welcome self-pay patients.",
+  "plans": [
+    "Aetna",
+    "Ambetter",
+    "AvMed",
+    "Blue Cross Blue Shield",
+    "Cigna",
+    "Florida Blue",
+    "Humana",
+    "Medicare plans",
+    "Optum",
+    "Oscar",
+    "UnitedHealthcare"
+  ],
+  "plansNote": "This list isn't complete and plans change. Your coverage is always verified before your first visit, and you'll know your cost before you're seen.",
+  "selfPayNote": "Self-pay initial evaluation. Follow-up visit fees are shared when you book. Current fees are always confirmed before your visit."
+}

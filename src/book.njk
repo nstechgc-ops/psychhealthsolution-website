@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: Book a visit
+description: Book a telehealth psychiatric visit with Ada Ojobo, PMHNP-BC. Use your insurance through Headway or Grow Therapy, book as a self-pay patient, or call the practice.
+permalink: /book/
+---
+<section class="page-head">
+  <div class="wrap">
+    <h1>Choose the easiest way to book</h1>
+    <p class="lede">All visits happen over secure, HIPAA-compliant video. You'll get your private visit link after booking.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="paths">
+      <article class="path featured">
+        <h2>Book with insurance</h2>
+        <p>Our booking partners check your coverage, show your expected cost, and let you pick a time that works for you.</p>
+        <div class="path-actions">
+          <a class="btn btn-primary" href="{{ site.headwayUrl }}" target="_blank" rel="noopener">Book on Headway</a>
+          <a class="btn btn-ghost" href="{{ site.growUrl }}" target="_blank" rel="noopener">Book on Grow Therapy</a>
+        </div>
+        <p class="note">Both open in a new tab. Not sure which to choose? Either works; pick the one that lists your plan.</p>
+      </article>
+      <article class="path">
+        <h2>Book as self-pay</h2>
+        <p>No insurance, or prefer not to use it? The initial evaluation is {{ site.selfPayFee }}, confirmed before your visit.</p>
+        <div class="path-actions">
+          {% if site.selfPayBookingUrl %}
+          <a class="btn btn-primary" href="{{ site.selfPayBookingUrl }}" target="_blank" rel="noopener">Book online</a>
+          {% else %}
+          <a class="btn btn-primary" href="tel:{{ site.phone | tel }}">Call to book</a>
+          {% endif %}
+        </div>
+        {% if not site.selfPayBookingUrl %}<p class="note">Online self-pay booking is coming soon. For now, call and we'll find a time with you.</p>{% endif %}
+      </article>
+      <article class="path">
+        <h2>Prefer to talk it through?</h2>
+        <p>Call the practice. {% if site.showMelissa %}Our virtual assistant answers any hour in English, Spanish and French and passes your request to the care team.{% else %}We'll answer your questions and help you book.{% endif %}</p>
+        <div class="path-actions">
+          <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap two-col">
+    <div class="prose">
+      <h2>Before your first visit</h2>
+      <ul class="checklist">
+        <li>Have your insurance card and a photo ID nearby.</li>
+        <li>Complete your intake forms on the secure patient platform you receive after booking. Please don't email health information.</li>
+        <li>Make a short list of current medications, including doses, and any past treatments.</li>
+        <li>Find a private, quiet spot with good internet. A phone, tablet or computer with a camera all work.</li>
+        <li>For a child's visit, a parent or guardian should plan to join.</li>
+      </ul>
+      <h2>What to expect</h2>
+      <p>Your first visit is a full psychiatric evaluation, usually the longest appointment you'll have. Ada will ask about what brings you in, your history and your goals, then talk through options with you. Follow-up visits are shorter and focus on how you're doing and adjusting your plan.</p>
+      <p>New to video visits? Our <a href="/telehealth/">telehealth guide</a> walks you through it.</p>
+    </div>
+    <aside class="aside">
+      <h2>Need help now?</h2>
+      <p>This practice doesn't provide emergency care. If you're in crisis or thinking about suicide, call or text <a href="tel:988">988</a> any time. In an emergency, call <a href="tel:911">911</a>.</p>
+    </aside>
+  </div>
+</section>
