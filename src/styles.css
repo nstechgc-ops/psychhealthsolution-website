@@ -395,5 +395,7 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 .about-portrait { max-width: 420px; width: 100%; justify-self: center; border-radius: 0; overflow: visible; }
 .about-portrait img { aspect-ratio: 4/5; }
 /* Keep the footer's last line clear of the floating Melissa button */
-body:has(.melissa) .foot-base { padding-bottom: 96px; }
-@media (max-width: 560px) { body:has(.melissa) .foot-base { padding-bottom: 84px; } }
+/* Footer base: everything sits left of the floating Melissa button */
+body:has(.melissa) .foot-base { justify-content: flex-start; padding-right: 270px; }
+@media (max-width: 860px) { body:has(.melissa) .foot-base { padding-right: 0; flex-direction: column; } }
+@media (max-width: 560px) { body:has(.melissa) .foot-base { padding-right: 0; } .foot-base p a + a { margin-left: 0; } .foot-base p:nth-child(2) { display: flex; flex-wrap: wrap; gap: 6px 18px; } }
