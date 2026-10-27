@@ -18,8 +18,8 @@ permalink: /contact/
     <div class="contact-grid">
       <article class="contact-card">
         <h2>Call</h2>
-        <p><a class="big" href="tel:{{ site.phone | tel }}">{{ site.phone }}</a></p>
-        <p>{% if site.showMelissa %}Answered any hour in English, Spanish and French. Leave a request or message and the care team will follow up.{% else %}Leave a message any time and the care team will call you back.{% endif %}</p>
+        {% set callPhone = (site.melissaPhone if site.showMelissa and site.melissaPhone else site.phone) %}<p><a class="big" href="tel:{{ callPhone | tel }}">{{ callPhone }}</a></p>
+        <p>{% if site.showMelissa %}Answered any hour in English and Spanish. Leave a request or message and the care team will follow up.{% else %}Leave a message any time and the care team will call you back.{% endif %}</p>
       </article>
       <article class="contact-card">
         <h2>Email</h2>

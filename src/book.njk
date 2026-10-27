@@ -39,9 +39,9 @@ permalink: /book/
       </article>
       <article class="path">
         <h2>Prefer to talk it through?</h2>
-        <p>Call the practice. {% if site.showMelissa %}Our virtual assistant answers any hour in English, Spanish and French and passes your request to the care team.{% else %}We'll answer your questions and help you book.{% endif %}</p>
+        <p>Call the practice. {% if site.showMelissa %}Our virtual assistant answers any hour in English and Spanish and passes your request to the care team.{% else %}We'll answer your questions and help you book.{% endif %}</p>
         <div class="path-actions">
-          <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+          {% set callPhone = (site.melissaPhone if site.showMelissa and site.melissaPhone else site.phone) %}<a class="btn btn-ghost" href="tel:{{ callPhone | tel }}">Call {{ callPhone }}</a>
         </div>
       </article>
     </div>
