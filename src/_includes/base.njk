@@ -57,7 +57,7 @@
       <ul>
         {% for l in links %}<li><a href="{{ l[0] }}"{% if page.url == l[0] %} aria-current="page"{% endif %}>{{ l[1] }}</a></li>{% endfor %}
       </ul>
-      <a class="nav-phone" href="tel:{{ site.phone | tel }}">{{ site.phone }}</a>
+      <a class="nav-phone" href="tel:{{ callPhone | tel }}">{{ callPhone }}</a>
       <a class="btn btn-primary" href="/book/">Book a visit</a>
     </nav>
   </div>
@@ -74,7 +74,7 @@
     </div>
     <div>
       <h2 class="foot-h">Reach us</h2>
-      <p><a href="tel:{{ site.phone | tel }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="tel:{{ callPhone | tel }}">{{ callPhone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p>{{ site.street }}<br>{{ site.city }}, {{ site.state }} {{ site.zip }}</p>
     </div>
     <div>

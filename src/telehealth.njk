@@ -31,7 +31,7 @@ permalink: /telehealth/
       </ol>
 
       <h2>If the link doesn't work</h2>
-      <p>Try a different browser (Chrome or Safari work well), restart your device, or switch from cellular data to Wi-Fi. If you still can't connect, call <a href="tel:{{ site.phone | tel }}">{{ site.phone }}</a> and let us know. We'll help you get connected or reschedule.</p>
+      <p>Try a different browser (Chrome or Safari work well), restart your device, or switch from cellular data to Wi-Fi. If you still can't connect, call <a href="tel:{{ callPhone | tel }}">{{ callPhone }}</a> and let us know. We'll help you get connected or reschedule.</p>
 
       <h2>Your privacy</h2>
       <p>Visits take place on HIPAA-compliant platforms designed for healthcare, and your information is protected under federal privacy law. Join from a private space so you can speak freely.</p>
@@ -42,7 +42,7 @@ permalink: /telehealth/
     <aside class="aside">
       <h2>Need a hand getting set up?</h2>
       <p>Call before your visit and we'll walk you through it. Older adults are especially welcome to ask.</p>
-      <a class="btn btn-ghost" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+      <a class="btn btn-ghost" href="tel:{{ callPhone | tel }}">Call {{ callPhone }}</a>
       <a class="btn btn-primary" href="/book/">Book a visit</a>
     </aside>
   </div>

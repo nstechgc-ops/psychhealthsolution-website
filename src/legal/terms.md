@@ -31,4 +31,4 @@ We may update these terms from time to time. The date at the top shows when they
 
 ## Contact
 
-Questions? Email [{{ site.email }}](mailto:{{ site.email }}) or call [{{ site.phone }}](tel:{{ site.phone | tel }}).
+Questions? Email [{{ site.email }}](mailto:{{ site.email }}) or call [{{ callPhone }}](tel:{{ callPhone | tel }}).

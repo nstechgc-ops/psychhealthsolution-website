@@ -12,7 +12,7 @@ bodyClass: home
       <p class="lede">{{ home.heroText }}</p>
       <div class="actions">
         <a class="btn btn-primary btn-lg" href="/book/">Book a visit</a>
-        <a class="btn btn-ghost btn-lg" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+        <a class="btn btn-ghost btn-lg" href="tel:{{ callPhone | tel }}">Call {{ callPhone }}</a>
       </div>
       <ul class="ticks">
         {% for p in home.heroPoints %}<li>{{ p }}</li>{% endfor %}
@@ -121,7 +121,7 @@ bodyClass: home
     <p>Taking the first step is often the hardest part. We'll make the rest simple.</p>
     <div class="actions center-actions">
       <a class="btn btn-primary btn-lg" href="/book/">Book a visit</a>
-      <a class="btn btn-ghost btn-lg" href="tel:{{ site.phone | tel }}">Call {{ site.phone }}</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{ callPhone | tel }}">Call {{ callPhone }}</a>
     </div>
   </div>
 </section>
