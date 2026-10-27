@@ -2,7 +2,7 @@
   "name": "Psychiatric Health Solution",
   "legalName": "Psychiatric Health Solution, P.L.L.C.",
   "tagline": "Care in mental health. Anytime. Anywhere.",
-  "url": "https://www.psychiatrichealthsolutionfl.com",
+  "url": "https://psychhealthsolution-website.nstechgc.workers.dev",
   "description": "Psychiatric evaluations and medication management by video for children, teens, adults and older adults anywhere in Florida. Board-certified psychiatric nurse practitioner Ada Ojobo, PMHNP-BC. Insurance and self-pay.",
   "provider": "Ada Ojobo",
   "credentials": "PMHNP-BC",
@@ -22,5 +22,6 @@
   "shareImage": "/images/share.jpg",
   "vapiPublicKey": "a7fe2b0e-d7e2-4134-8291-7b8785450e2e",
   "melissaAssistantId": "d11ca117-08f9-4c30-beb5-27a58dd74dbd",
-  "melissaPhone": "727-476-9223"
+  "melissaPhone": "727-476-9223",
+  "launchUrl": "https://www.psychiatrichealthsolutionfl.com"
 }
