@@ -376,9 +376,10 @@ blockquote footer { font-size: .92rem; color: var(--ink-2); }
 .mel-end:hover { background: #74223a; }
 .mel-note { font-size: .78rem; color: var(--ink-2); margin: 16px 0 0; line-height: 1.5; }
 @media (max-width: 560px) {
-  .mel-launch { padding: 8px; }
-  .mel-launch-txt { display: none; }
-  .mel-dot { width: 48px; height: 48px; }
+  .mel-launch { padding: 6px 16px 6px 6px; gap: 10px; }
+  .mel-launch-txt strong { font-size: .92rem; }
+  .mel-launch-txt span { display: none; }
+  .mel-dot { width: 38px; height: 38px; }
   .mel-panel { width: calc(100vw - 24px); }
   .melissa { right: 12px; bottom: 12px; }
 }
